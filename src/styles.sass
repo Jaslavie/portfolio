@@ -1,8 +1,8 @@
 //* colors
 $bg: #101010
 $textColor: #FFF 
-$prim: blue
-$sec: grey 
+
+$borderColor: #363637
 
 //* Fonts
 @font-face
@@ -12,11 +12,32 @@ $sec: grey
 $headerFont: 'Helvetica Neue', sans-serif
 $stylishFont: 'Source Serif Pro', serif
 
+$h1: 4em
+$h2: 2.6em
+$h3: 2em
+$h4: 1.75em
+$paragraph: 1.2em
+
 h1, h2, h3, h4, h5, h6
   font-family: $headerFont
+  font-weight: 400
+  margin: 0
   span
     font-family: $stylishFont
 
+h1
+  font-size: $h1
+
+h2
+  font-size: $h2
+h3
+  font-size: $h3
+h4
+  font-size: $h4
+
+p
+  font-size: $paragraph
+  margin: 0
 
 //* Default Structure
 html,
@@ -26,32 +47,91 @@ body
   background-color: $bg
   color: $textColor
   font-family: 'Inter', sans-serif
- 
+section
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 100vh
+  flex-direction: column
+  padding: 5vh 10vw
+  .hero
+    align-items: flex-start
+    align-content: flex-start
+    width: 100%
+    h1, p
+      text-align: left
+      
+
+
 //* Navbar
 .navbar
-  padding: 1rem
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding: auto 5vw
+  height: 12vh
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 100
+  &::after
+    content: ""
+    position: absolute
+    left: 0
+    top: 12vh
+    width: 100%
+    height: 2px
+    z-index: 100
+    background-color: $borderColor
 
   ul
-    list-style-type: none
     display: flex
-    justify-content: space-around
+    list-style: none
     padding: 0
     margin: 0
+    width: 25%
+    
+    img
+      width: 100%
+    li
+      margin: 0 15px
+      position: relative
+      
+      &.active
+        a
+          font-weight: bold
 
-  li
-    display: inline-block
+        &::after
+          transform: scaleX(1)
+          transform-origin: bottom left
 
-  a
-    text-decoration: none
-    color: #FFF
-    font-weight: bold
-    padding: 0.5rem 1rem
-    border-radius: 4px
-    transition: background-color 0.3s ease
+      a
+        text-decoration: none
+        color: #fff
+        position: relative
+        display: inline-block
+        
 
-    &:hover
-      background-color: #e9ecef
-      cursor: pointer
-  .active
-    a
-      color: red
+      &:hover
+        cursor: pointer
+
+        a::after
+          transform: scaleX(1)
+          transform-origin: bottom left
+
+      &::after
+        content: ""
+        position: absolute
+        left: 0
+        bottom: -2vh
+        width: 100%
+        height: 2px
+        background-color: #fff
+        transform: scaleX(0)
+        transform-origin: bottom right
+        transition: transform 0.2s ease-out
+
+      &:hover::after
+        transform: scaleX(1)
+        transform-origin: bottom left
