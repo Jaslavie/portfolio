@@ -1,8 +1,10 @@
 //* colors
 $bg: #101010
 $textColor: #FFF 
-
+$paragraphColor: #a1a1a1
+$accentColor: #6360ff
 $borderColor: #363637
+$cardColor: #1d1d1f
 
 //* Fonts
 @font-face
@@ -17,6 +19,7 @@ $h2: 2.6em
 $h3: 2em
 $h4: 1.75em
 $paragraph: 1.2em
+
 
 h1, h2, h3, h4, h5, h6
   font-family: $headerFont
@@ -38,6 +41,7 @@ h4
 p
   font-size: $paragraph
   margin: 0
+  color: $paragraphColor
 
 //* Default Structure
 html,
@@ -58,8 +62,10 @@ section
     align-items: flex-start
     align-content: flex-start
     width: 100%
-    h1, p
+    h1, h3
       text-align: left
+    h3
+      color: $paragraphColor
       
 
 

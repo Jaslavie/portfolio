@@ -1,12 +1,15 @@
 import NavBar from "../Components/NavBar";
 import Reveal from "../Components/Reveal";
 import { TypeAnimation } from "react-type-animation";
+import Container from "../Components/Container";
+
 function Home() {
   return (
     <div>
       {" "}
       <NavBar />
       <Reveal width="100%">
+        {/* hero */}
         <section>
           <div className="hero">
             <h1>Jasmine is a</h1>
@@ -29,8 +32,16 @@ function Home() {
                 />
               </span>
             </h1>
-            <p>18 y.o. design engineer building @ NASA</p>
+            <h3>18 y.o. design engineer building @ NASA</h3>
           </div>
+        </section>
+        {/* experience */}
+        <section>
+          <Container
+            title="Mission Design Manager @ NASA L'SPACE"
+            description="Leading a team of "
+            img="src/Assets/about/logos/NASA_logo.svg.png"
+          ></Container>
         </section>
       </Reveal>
     </div>

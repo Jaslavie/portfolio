@@ -1,0 +1,38 @@
+//* colors
+$bg: #101010
+$textColor: #FFF 
+$accentColor: #6360ff
+$borderColor: #363637
+$cardColor: #1d1d1f
+
+$cardBorder: 1px solid $borderColor
+
+//* cards
+.container
+  display: flex
+  align-items: center
+  border: $cardBorder
+  background-color: $cardColor
+  color: white
+  padding: 15px
+  border-radius: 4px
+  .icon
+    width: 40px
+    height: 40px
+    margin-right: 15px
+    overflow: hidden
+    border-radius: 2px
+    img
+        width: 100%
+        height: 100%
+
+  .content
+    h2
+      font-size: 18px
+      font-weight: bold
+      margin: 0 0 5px 0
+
+    p
+      font-size: 14px
+      margin: 0
+      opacity: 0.8
