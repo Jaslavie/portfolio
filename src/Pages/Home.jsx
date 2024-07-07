@@ -1,11 +1,14 @@
 import NavBar from "../Components/NavBar";
-function Home() {
-  
+import Reveal from "../Components/Reveal";
 
+function Home() {
   return (
     <div>
+      {" "}
       <NavBar />
-      <h1>Welcome to the Landing Page</h1>
+      <Reveal width="100%">
+        <h1>Welcome to the Landing Page</h1>
+      </Reveal>
     </div>
   );
 }

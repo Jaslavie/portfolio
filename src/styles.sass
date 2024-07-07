@@ -1,20 +1,30 @@
 //* colors
 $bg: #101010
-$text-color: #FFF 
+$textColor: #FFF 
 $prim: blue
-$hover-prim: darkblue 
 $sec: grey 
-$hover-sec: darkgrey 
 
 //* Fonts
-$
+@font-face
+  font-family: "Source Serif Pro"
+  src: url("src/Fonts/SourceSerifPro.otf") format("truetype")
 
+$headerFont: 'Helvetica Neue', sans-serif
+$stylishFont: 'Source Serif Pro', serif
+
+h1, h2, h3, h4, h5, h6
+  font-family: $headerFont
+  span
+    font-family: $stylishFont
+
+
+//* Default Structure
 html,
 body  
   margin: 0 
   overflow-x: hidden 
   background-color: $bg
-  color: $text-color
+  color: $textColor
   font-family: 'Inter', sans-serif
  
 //* Navbar
