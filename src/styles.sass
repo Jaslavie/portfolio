@@ -1,0 +1,47 @@
+//* colors
+$bg: #101010
+$text-color: #FFF 
+$prim: blue
+$hover-prim: darkblue 
+$sec: grey 
+$hover-sec: darkgrey 
+
+//* Fonts
+$
+
+html,
+body  
+  margin: 0 
+  overflow-x: hidden 
+  background-color: $bg
+  color: $text-color
+  font-family: 'Inter', sans-serif
+ 
+//* Navbar
+.navbar
+  padding: 1rem
+
+  ul
+    list-style-type: none
+    display: flex
+    justify-content: space-around
+    padding: 0
+    margin: 0
+
+  li
+    display: inline-block
+
+  a
+    text-decoration: none
+    color: #FFF
+    font-weight: bold
+    padding: 0.5rem 1rem
+    border-radius: 4px
+    transition: background-color 0.3s ease
+
+    &:hover
+      background-color: #e9ecef
+      cursor: pointer
+  .active
+    a
+      color: red
